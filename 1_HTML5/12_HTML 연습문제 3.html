@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12_HTML 연습 문제 3</title>
+</head>
+
+<body>
+  <h1>회원 가입</h1>
+  <fieldset>
+    <legend>필수 입력 정보</legend>
+    <table>
+      <tr>
+        <th>ID</th>
+        <td><input type="text" name="id" placeholder="아이디 10글자 이내"> <button>중복 확인</button><br></td>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" size="30" placeholder="영문,숫자,특수문자 포함 8글자 이상"><br></td>
+      </tr>
+      <tr>
+        <th>비밀번호 확인</th>
+        <td><input type="password"  size="30"><br></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+      <td><input type="email">
+      <select><option>직접 입력</option></select><br></td>
+      </tr>
+    </table>
+  </fieldset>
+
+
+  <fieldset>
+    <legend>추가 정보</legend>
+    <form>
+      프로필 사진 : <input type="file"> <br><br>
+      성별 : <label for="male">남자</label>
+      <input type="radio" name="gender" id="male">
+
+      <label>여자
+        <input type="radio" name="gender">
+      </label><br><br>
+      생년월일 : <input type="date"><br><br>
+      취미 <br>
+      <input type="checkbox">
+      <label>야구</label>
+      <input type="checkbox">
+      <label>농구</label>
+      <input type="checkbox">
+      <label>축구</label><br>
+      <input type="checkbox">
+      <label>공부</label>
+      <input type="checkbox">
+      <label>음악감상</label><br>
+      <input type="checkbox">
+      <label>기타 <input type="text">
+      </label><br><br>
+
+      자기소개 <br>
+      <textarea rows="10" cols="70" style="resize: none;" name="self"></textarea>
+    </form>
+  </fieldset>
+  <br>
+  <button>회원가입</button> <button>다시입력</button> <button>이전으로</button>
+</body>
+
+</html>

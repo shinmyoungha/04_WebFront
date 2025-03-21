@@ -298,6 +298,36 @@
     name="self"
     ></textarea>
 
+    <hr>
+
+    <h3>select 태그와 option 태그</h3>
+
+    <form>
+      <select name="test">
+        <option value="1">선택1</option>
+        <option>선택2</option>
+        <option selected>선택3</option>
+        <option>선택4</option>
+        <option disabled>선택5</option>
+      </select>
+
+      <button>제출</button>
+    </form>
+
+    <!--
+      select 제출 시
+      option 태그에 value 가 있으면 : value 속성안에 작성된 값 제출
+      option 태그에 value 가 없으면 : 
+      <option></option> 사이에 작성된 값이 제출됨      
+
+      selected 속성 : select의 기본값을 설정하는 속성
+      
+      disabled 속성 : potion을 비활성화(클릭 및 입력 불가)
+    -->
+
+    <input type="checkbox" checked>
+    <input type="radio" checked>
+    <!-- checked 속성 : checkbox / radio 체크해두는 속성-->
 
 </body>
 
