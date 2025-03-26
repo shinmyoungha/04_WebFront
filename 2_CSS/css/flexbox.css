@@ -393,9 +393,7 @@ FlexBox 컨테이너 내에서 아이템의 크기와 배율을 설정하는 속
   flex-basis: 80%;
   display: flex;
   align-items: flex-end;
-
   justify-content: space-between;
-
 }
 
 .body4-2-1 {
