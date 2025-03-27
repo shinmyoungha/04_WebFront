@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+
+    /* 테두리 표시하기*/
+     border: 1px solid black;
+}
+
+body {
+  margin: 30px;
+}
+
+
+main {
+  width: 1500px;
+  margin: auto;
+}
+
+header {
+  height: 70px;
+  display: flex;
+}
+
+header > section:nth-of-type(1),
+header > section:nth-of-type(3) {
+  flex-basis: 20%;
+}
+
+header > section:nth-of-type(2) {
+  flex-basis: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > section:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hamberger {
+  width: 40px;
+
+}
+
+#youtube {
+  width: 150px;
+}
+
+.search-area {
+  width: 300 0px;
+}
+
+.search-area fieldset {
+  border: 2px solid grey;
+  border-radius: 25px;
+  padding: 2px;
+
+  display: flex;
+}
+
+#query {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+  /* outline : input 태그에 포커싱되었을때
+    이를 표현하기 위한 바깥선
+    0이나 none으로 하면 없어진다
+    */
+  flex-basis: 92%;
+}
+
+#keybord-btn {
+  flex-basis: 8%;
+  cursor: pointer;
+  font-size: 20px;
+  color: grey;
+  border: 0;
+  background-color: transparent;
+}
+
+#search-btn {
+  height: 100%;
+  flex-basis: 8%;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  border: 0;
+  background-color: gray;
+  /* transparent : 배경색 투명 */
+}
+
+
+
+.content {
+  display: flex;
+}
+
+.body2 > p {
+  background-color: gray;
+}
+/*
+미디어 쿼리(Media Query)
+
+@media
+미디어 쿼리를 선언하는 키워드로,
+특정 조건(화면 크기)에 따라 CSS 스타일을 적용할 때 사용
+
+all
+모든 믿어 유형에 적용됨.
+생략가능, 보통 screen을 많이 사용함
+
+(max-width: 767px)
+화면 너비가 767pㅌ 이하일 때 스타일을 적용함
+스마트폰, 작은 태블릿 등 작은 화면에서 적용하는 크기
+*/
+
+/* 모바일 : 767px 이하일 때 */
+@media all and (max-width: 767px){
+  main {
+    width: 100vw;
+    /* vw : viewport width 의 약자
+      현재 뷰포트의 100%만큼 너비 차지
+    */
+  }
+
+  header {
+    display: none;
+  }
+
+ 
+  .content {
+    flex-direction: column;
+  }
+
+  .content-2 {
+    padding: 20px;
+  }
+
+  footer {
+    width: 100vw;
+  }
+}
+/* 태블릿 : 768px ~ 1023px 범위 */
+@media all and(min-widtg: 768px) and (max-width: 1023px) {
+
+}
+
+/* PC : 너비가 1024px 이상일 때 */
+@media all and(min-widtg: 1024px) {
+
+}
