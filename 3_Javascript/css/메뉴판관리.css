@@ -52,7 +52,6 @@ main{
   flex-grow: 1;
 }
 
-
 /* 메뉴 */
 .menu-container{
   height: 300px;
@@ -90,11 +89,6 @@ main{
 .menu-price-input{
   width: 35%;
 }
-
-
-
-
-
 
 /* 버튼 영역 */
 .btn-container{

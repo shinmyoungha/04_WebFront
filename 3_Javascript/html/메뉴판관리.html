@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>메뉴판관리</title>
 
-  <link rel="stylesheet" href="../css/메뉴관리.css">
+  <link rel="stylesheet" href="../css/메뉴판관리.css">
 </head>
-
 <body>
-
+  
   <main>
-
     <div class="res-name-container">
-
       <p>
         <span>식당명</span>
         <span class="explanation">(클릭 시 입력창 활성화)</span>
         <span class="explanation">(포커스 해제 시(blur) 원래대로 돌아옴)</span>
-      </p>
-      :
-      <span id="resName">식당명을 입력하세요</span>
+      </p> 
+      : 
+      <span id="resName">식당명을 입력하세요</span> 
       <input type="text" id="resNameInput" class="res-name-hidden">
     </div>
 
@@ -46,43 +42,18 @@
     </div>
   </main>
 
-  <script src="../js/메뉴관리.js"></script>
-  <script>
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function () {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function (msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    }
-    else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-    // ]]>
-  </script>
+
+  <pre>
+    힌트.
+
+    1. input 태그가 focus를 잃었을 때 (blur) : 요소.addEventListener("blur", () => {})
+
+    2. classList.toggle() : 지정된 클래스가 요소에 존재하면 제거하고, 존재하지 않으면 추가하는 방식
+  </pre>
+
+
+
+
+  <script src="../js/메뉴판관리.js"></script>
 </body>
 </html>
