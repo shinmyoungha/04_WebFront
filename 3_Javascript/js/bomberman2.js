@@ -22,7 +22,7 @@ document.addEventListener("keydown", function(e) {
             break;
 
         case 'z' : explodeBomb(); break;
-        default:asd
+        default:
             alert("방향키, z, x만 가능"); break;
     }
 
