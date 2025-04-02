@@ -19,7 +19,7 @@ document.addEventListener("keydown", function(e) {
             bomb.style.transform = `translate(${xindex}px, ${yindex}px)`;
             bomb.style.position = "absolute";
             box.appendChild(bomb); // 기존 요소 유지하면서 폭탄 추가
-            break;dk
+            break;
 
         case 'z' : explodeBomb(); break;
         default:
