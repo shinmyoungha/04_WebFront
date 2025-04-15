@@ -1,12 +1,17 @@
-// 배경색 적용할 div 적용
-const boxList = document.querySelectorAll(".box");
+const input3 = document.querySelector("#input3");
+const box3 = document.querySelector("#box3");
 
-// 배경색 입력할 input 배열
-const inputList = document.querySelectorAll(".color-input");
+input3.addEventListener("keyup", function(e) {
 
-document.querySelector("#changeButton").addEventListener("click", function() {
-
-  for(let i = 0; i < boxList.length; i++) {
-    boxList[i].style.backgroundColor = inputList[i].value;
+  if(e.key == "Enter") {
+    box3.style.backgroundColor = input3.value;
   }
+});
+
+box3.addEventListener("click", function() {
+
+  // 다 같은 의미임
+  // alert(`배경색 : ${this.style.backgroundColor}`) 
+  // e.target : 이벤트가 발생한 대상 요소 == this
+  alert(`배경색 : ${box3.style.backgroundColor}`)
 });
