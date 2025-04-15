@@ -1,4 +1,12 @@
-* {
-  
+#box{    
+    display: flex;
 }
 
+[type="number"] {
+    width: 50%;
+}
+    
+#apply-btn {
+    margin-top: 10px;
+    margin-left: 250px;
+}
