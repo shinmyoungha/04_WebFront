@@ -21,7 +21,7 @@ applyBtn.addEventListener("click", function() {
 
   const box = document.querySelector("#box"); // 박스요소(대상)
 
-  // input 에 작성된 값에 따라 #box에 스타일 추가
+  // input 에 작성된 값에 따라 #box에 스타일 추가asdasd
 
   if(boxWidth.value.trim().length > 0) {
     box.style.width = boxWidth.value + "px";
