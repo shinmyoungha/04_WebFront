@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+=======
+
+#box {
+  display: none;  
+
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+>>>>>>> 581239475c0ee8f2e1e3599bc98000661de0516f

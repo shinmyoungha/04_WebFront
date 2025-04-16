@@ -21,6 +21,7 @@ const content = document.querySelector("#content"); // 작성글
 
 const box = document.querySelector("#box"); // 박스요소(대상)
 
+<<<<<<< HEAD
 // input 에 작성된 값에 따라 #box에 스타일 추가아아아아아아아아아아아
 if (width.value.trim().length > 0) {
   box.style.width = width.value + "px";
@@ -28,6 +29,9 @@ if (width.value.trim().length > 0) {
 if (height.value.trim().length > 0) {
   box.style.height = height.value + "px";
 }
+=======
+  // input 에 작성된 값에 따라 #box에 스타일 추가아아아아아아아아아아아어아
+>>>>>>> 581239475c0ee8f2e1e3599bc98000661de0516f
 
 box.style.fontSize = fontSize.value + "px";
 

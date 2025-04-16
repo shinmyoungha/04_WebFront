@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI 구현</title>
+  <link rel="stylesheet" href="/UI구현.html">
+</head>
+<body>
+  <div class="container">
+    <table class="controller">
+      <tr>
+        <th>너비 :</th>
+        <td><input type="number" min="1" max="500" id="box-width">px</td>
+        <th>높이 :</th>
+        <td><input type="number" min="1" max="500" id="box-height">px</td>
+      </tr>
+
+      <tr>
+        <th>글자크기 :</th>
+        <td><input type="number" min="1" max="100" id="fs">px</td>
+        <th>굵기 :</th>
+        <td>
+          보통<input type="radio" name="fw" value="normal"></label>
+          굵게<input type="radio" name="fw" value="bold">
+        </td>
+      </tr>
+
+      <tr>
+        <th>글자색 :</th>
+        <td><input type="text" id="box-font-color"></td>
+        <th>배경색 :</th>
+        <td><input type="text" id="box-bg-color"></td>
+      </tr>
+
+      <tr>
+        <th>가로정렬 :</th>
+        <td colspan="3">
+          왼쪽<input type="radio" name="align-row" value="flex-start">
+          가운데<input type="radio" name="align-row" value="center"> 
+          오른쪽<input type="radio" name="align-row" value="flex-end">
+        </td>
+      </tr>
+
+      <tr>
+        <th>세로정렬 :</th>
+        <td colspan="3">
+          위<input type="radio" name="align-col" value="flex-start">
+          가운데<input type="radio" name="align-col" value="center">
+          아래<input type="radio" name="align-col" value="flex-end">
+        </td>
+      </tr>
+
+      <tr>
+        <th>출력 문자열 :</th>
+        <td colspan="3">
+          <input type="text" id="content" style="width: 100%;">
+        </td>
+      </tr>
+    </table>
+
+    <button id="apply-btn">적용하기</button>
+
+    <div id="box"></div>
+  </div>
+
+  <script src="/UI구현.js"></script>
+</body>
+</html>

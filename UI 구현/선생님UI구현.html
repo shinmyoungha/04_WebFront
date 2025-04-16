@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UI구현</title>
-
+  <title>UI 구현</title>
   <link rel="stylesheet" href="선생님UI구현.css">
 </head>
 <body>
+  <div class="container">
+    <table class="controller">
+      <tr>
+        <th>너비 :</th>
+        <td><input type="number" min="1" max="500" id="box-width"> px</td>
+        <th>높이 :</th>
+        <td><input type="number" min="1" max="500" id="box-height"> px</td>
+      </tr>
 
-    <div class="container">
-      <table class="controller">
-        <tr>
-          <th>너비 : </th>
-          <td><input type="number" min="1" max="500" id="box-width"></td>
-          <th>높이 : </th>
-          <td><input type="number" min="1" max="500" id="box-width"></td>
-        </tr>
-        <tr>
-          <th>글자크기 :</th>
-          <td><input type="number" min="1" max="100" id="fs"> </td>
-          <th> 굵기 : </th>
-          <label><input type="radio" name="fw" value="normal"></label>
-          <label><input type="radio" name="fw" value="bold"></label>
-          <td>
+      <tr>
+        <th>글자크기 :</th>
+        <td><input type="number" min="1" max="100" id="fs"> px</td>
+        <th>굵기 :</th>
+        <td>
+          <label><input type="radio" name="fw" value="normal"> 보통</label>
+          <label><input type="radio" name="fw" value="bold"> 굵게</label>
+        </td>
+      </tr>
 
-          </td>
-        </tr>
+      <tr>
+        <th>글자색 :</th>
+        <td><input type="text" id="box-font-color"></td>
+        <th>배경색 :</th>
+        <td><input type="text" id="box-bg-color"></td>
+      </tr>
 
-        <tr>
-          <th>세로정렬 : </th>
-          <td colspan="3">
-            <label><input type="radio" name="align-col" value="flex-start"></label>
-            <label><input type="radio" name="align-col" value="center"></label>
-            <label><input type="radio" name="align-col" value="flex-end"></label>
-          </td>
-        </tr>
+      <tr>
+        <th>가로정렬 :</th>
+        <td colspan="3">
+          <label><input type="radio" name="align-row" value="flex-start"> 왼쪽</label>
+          <label><input type="radio" name="align-row" value="center"> 가운데</label>
+          <label><input type="radio" name="align-row" value="flex-end"> 오른쪽</label>
+        </td>
+      </tr>
 
-        <tr>
-          <th>가로정렬 : </th>
-          <td rowspan="3">
-            <label><input type="radio" name="align-row" value="flex-start"></label>
-            <label><input type="radio" name="align-row" value="center"></label>
-            <label><input type="radio" name="align-row" value="flex-end"></label>
-          </td>
-        </tr>
+      <tr>
+        <th>세로정렬 :</th>
+        <td colspan="3">
+          <label><input type="radio" name="align-col" value="flex-start"> 위</label>
+          <label><input type="radio" name="align-col" value="center"> 가운데</label>
+          <label><input type="radio" name="align-col" value="flex-end"> 아래</label>
+        </td>
+      </tr>
 
-        <tr>
-          <th>출력 문자열 : </th>
-          <td colspan="3">
-            <input type="text" id="content">
-          </td>
-        </tr>
-      </table>
-   
-      <button id="applt-btn">적용하기</button>
+      
 
-      <div id="box"></div>
-    </div>
+      <tr>
+        <th>출력 문자열 :</th>
+        <td colspan="3"><input type="text" id="content" style="width: 100%;"></td>
+      </tr>
+    </table>
+
+    <br>
+    <button id="apply-btn">적용하기</button>
+
+    <div id="box"></div>
+  </div>
 
   <script src="선생님UI구현.js"></script>
 </body>
