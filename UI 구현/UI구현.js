@@ -1,30 +1,47 @@
-const box3 = document.querySelector("#box3");
-const createBox = document.querySelector("#createBox"); // button
+// 적용하기 버튼 얻어오기
+const applyBtn = document.querySelector("#apply-btn");
 
-createBox.addEventListener("click", () => {
+applyBtn.addEventListener("click", function() {
 
-  // 1. div 요소 설정
-  const box = document.createElement("div"); // <div></div>
-  console.log(box);
+  // inpput 요소들을 모두 얻어오기
 
-  // 2. 만들어진 div 요소 "box" 클래스 추가
-  box.classList.add("Button"); // <div class="box"></div>
+  const boxWidth = document.querySelector("#box-width"); // 너비
+  const boxHeight = document.querySelector("#box-height"); // 높이
+  const fs = document.querySelector("#fs"); // 폰트크기
 
-  // 3. container의 마지막 자식으로 div요소 추가
-  container.append(Button);
+  const fw = document.querySelector("[name='fw']:checked"); // 글씨 굵기
 
-  // 4. input 요소 생성
-  const input = document.createElement("input"); // <input>
-  input.type = "text"; // <input type="text">
+  const fontColor = document.querySelector("#box-font-color"); // 글씨색
+  const bgColor = document.querySelector("#box-bg-color"); // 배경색
 
-  // 5. 생성된 input 을 box의 마지막 자식으로 추가
-  box.append(input);
-});
+  const row = document.querySelector("[name='align-row']:checked"); // 가로정렬
+  const col = document.querySelector("[name='align-col']:checked"); // 세로정렬
 
-box3.addEventListener("click", function() {
+  const content = document.querySelector("#content"); // 작성글
 
-  // 다 같은 의미임
-  // alert(`배경색 : ${this.style.backgroundColor}`) 
-  // e.target : 이벤트가 발생한 대상 요소 == this
-  alert(`배경색 : ${box3.style.backgroundColor}`)
+  const box = document.querySelector("#box"); // 박스요소(대상)
+
+  // input 에 작성된 값에 따라 #box에 스타일 추가아아아아아아아아아아아어아
+
+  if(boxWidth.value.trim().length > 0) {
+    box.style.width = boxWidth.value + "px";
+  }
+  if(boxHeight.value.trim().length > 0) {
+    box.style.height = boxHeight.value + "px";
+  }
+
+  box.style.fontSize = fs.value + "px";
+
+  if(fw != null){
+    box.style.fontWeight = fw.value;
+  }
+
+  box.style.color = fontColor.value;
+  box.style.backgroundColor = bgColor.value;
+
+  box.style.justifyCountent = row.value;
+  box.style.alignItems = col.value;
+  
+  box.innerText = content.value;
+
 });
